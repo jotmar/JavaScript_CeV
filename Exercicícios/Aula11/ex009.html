@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brasileiro ou Estrangeiro</title>
+</head>
+<body>
+    <h1>Identificando estrangeiros</h1>
+    Qual País você vive: <input type="text" id="country">
+    <input type="button" value="Analisar" onclick="estrangeiro()" >
+    <div id="resp"></div>
+    
+    <script>
+        function estrangeiro(){
+            var resp = document.querySelector("div#resp")
+            var pais = document.querySelector('input#country').value
+            //pais = String(pais.value)
+            resp.innerHTML = `<p>Vive em ${pais}</p>`
+            if(pais == 'Brasil'){
+                resp.innerHTML += '<p>Você é <strong>Brasileiro!</strong></p>'
+            }else{
+                resp.innerHTML += '<p>Você é <strong>Estrangeiro</strong></p>'
+            }
+        }
+    </script>
+
+</body>
+</html>

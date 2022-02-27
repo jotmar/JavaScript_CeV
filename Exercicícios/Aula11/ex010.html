@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN</title>
+</head>
+<body>
+    <h1>Sistema de multas</h1>
+    Velocidade do carro: <input type="number" name="radar" id="radar">
+    <input type="button" value="Verificar" id="detran">
+    <div id="resp"></div>
+    <script>
+        var verificar = document.querySelector('input#detran')
+        verificar.addEventListener('click', multar)
+        
+        function multar(){
+            var velocidade_text = document.querySelector('input#radar')
+            var velocidade = Number(velocidade_text.value)
+            var resp = document.querySelector('div#resp')
+            resp.innerHTML = `<p>Sua velocidade atual é de <strong>${velocidade}</strong>Km/h</p>`
+            if(velocidade > 60){
+                resp.innerHTML += "<strong>Você foi multado</strong> por excesso de velocidade!"
+            }
+            resp.innerHTML += '<p>Dirija sempre com cinto de segurança!'
+        }
+
+
+    </script>
+</body>
+</html>
