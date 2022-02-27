@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando Números</title>
+    
+    
+    <style>
+        div#res {
+            font: normal 15pt Arial;
+            background: greenyellow;
+            color: rgb(0, 0, 0);
+            height: 100px;
+            width: 100px;
+            line-height: 100px;
+            text-align: center;
+            margin-top: 10px;
+        }
+        input {
+            font: normal 15pt Arial;
+            width: 100px;
+        }
+
+    </style>
+
+
+</head>
+<body>
+    <h1>Somando Valores</h1>
+    <input type="number" name="n1" id="n1"> +
+    <input type="number" name="n2" id="n2">
+    <input type="button" value="Somar" onclick="somar()">
+    <div id="res">Resultado</div>
+    
+    
+    <script>
+
+        function somar() {
+            var txt1 = document.querySelector("input#n1");
+            var txt2 = document.querySelector("input#n2");
+            var res = document.querySelector("div#res")
+            var n1 = Number(txt1.value)
+            var n2 = Number(txt2.value)
+            var soma = n1 + n2
+            res.innerHTML = `<strong>${soma}</strong>`
+        }
+
+    </script>
+
+    
+</body>
+</html>

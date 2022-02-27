@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros Passos no DOM</title>
+    <style>
+        body {
+            background: blueviolet;
+            color: white;
+            font: normal 10pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando com o DOM</h1>
+    <p id="MyID">Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+    <p class="Jot">Selecionando com o DOM</p>
+    <div id="msg">Clique em mim</div>
+    <script>
+        corpo = document.body
+        var p1 = document.getElementById('MyID')
+        var p2 = document.getElementsByTagName('p')[1]
+        //var p3 = document.getElementsByName('jot')[0]
+        //var p4 = document.getElementsByClassName('msg')[0]
+        var p3 = document.querySelector('p.Jot')
+        var p4 = document.querySelectorAll('div#msg')[0]
+        document.write(`Parágrafo 1: ${p1.innerHTML}<br>`)
+        document.write(`Parágrafo 2: ${p2.innerHTML}<br>`)
+        document.write(`Parágrafo 3: ${p3.innerHTML}<br>`)
+        document.write(`Parágrafo 4: ${p4.innerHTML}<br>`)
+        corpo.style.background = 'pink'
+        p1.style.color = 'blue'
+        p2.style.color = 'cyan'
+        p3.style.color = 'red'
+        p4.style.color = 'green'
+    </script>
+</body>
+</html>
