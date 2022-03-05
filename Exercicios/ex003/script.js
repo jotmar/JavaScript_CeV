@@ -24,11 +24,11 @@ function contar(){
         // Se o inicio for maior que o fim
         else if (ini > fim){
             for (ini; ini >= fim; ini -= passo){
-                res.innerHTML += ` ${ini} 👉`
+                res.innerHTML += ` ${ini} \u{1F449}`
             }
         }
         else {
-            res.innerHTML += ` ${ini} 👉`
+            res.innerHTML += ` ${ini} \u{1F449}`
         }
         res.innerHTML += ' 🏁'
     }

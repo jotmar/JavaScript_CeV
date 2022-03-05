@@ -37,11 +37,11 @@ function MostrarFoto(){
             detect = `Detectamos uma mulher de ${idade} anos`
             img.setAttribute('src', 'imagens/mulher.png')
         }
-        else if (idade > 50 && sex[0].checked){
+        else if (idade >= 50 && sex[0].checked){
             detect = `Detectamos um idoso de ${idade} anos`
             img.setAttribute('src', 'imagens/idoso.png')
         }
-        else if (idade > 50 && sex[1].checked){
+        else if (idade >= 50 && sex[1].checked){
             detect = `Detectamos uma idosa de ${idade} anos`
             img.setAttribute('src', 'imagens/idosa.png')
         }
